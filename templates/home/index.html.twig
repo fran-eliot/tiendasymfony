@@ -1,0 +1,25 @@
+{# templates/home/index.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ path('app_fabricante_index') }}">Fabricantes</a></li>
+                <li><a href="{{ path('app_producto_index') }}">Productos</a></li>
+                <li><a href="{{ path('app_cliente_index') }}">Clientes</a></li>
+                <li><a href="{{ path('app_pedido_index') }}">Pedidos</a></li>
+                <!-- Otros enlaces del menú -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenido principal del home -->
+    </main>
+</body>
+</html>

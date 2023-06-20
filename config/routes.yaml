@@ -1,0 +1,104 @@
+app_home:
+   path: /
+   controller: App\Controller\HomeController::index
+
+app_fabricante_index:
+    path: /fabricante
+    controller: App\Controller\FabricanteController::index
+    methods: ['GET']
+
+app_fabricante_new:
+    path: /fabricante/new
+    controller: App\Controller\FabricanteController::new
+    methods: ['GET','POST']
+
+app_fabricante_show:
+    path: /fabricante/{id}
+    controller: App\Controller\FabricanteController::show
+    methods: ['GET']
+
+app_fabricante_edit:
+    path: /fabricante/{id}/edit
+    controller: App\Controller\FabricanteController::edit
+    methods: ['GET','POST']
+
+app_fabricante_delete:
+    path: /fabricante/{id}
+    controller: App\Controller\FabricanteController::delete
+    methods: ['POST']
+
+app_producto_index:
+    path: /producto
+    controller: App\Controller\ProductoController::index
+    methods: ['GET']
+
+app_producto_new:
+    path: /producto/new
+    controller: App\Controller\ProductoController::new
+    methods: ['GET','POST']
+
+app_producto_show:
+    path: /producto/{id}
+    controller: App\Controller\ProductoController::show
+    methods: ['GET']
+
+app_producto_edit:
+    path: /producto/{id}/edit
+    controller: App\Controller\ProductoController::edit
+    methods: ['GET','POST']
+
+app_producto_delete:
+    path: /producto/{id}
+    controller: App\Controller\ProductoController::delete
+    methods: ['POST']
+
+app_cliente_index:
+    path: /cliente
+    controller: App\Controller\ClienteController::index
+    methods: ['GET']
+
+app_cliente_new:
+    path: /cliente/new
+    controller: App\Controller\ClienteController::new
+    methods: ['GET','POST']
+
+app_cliente_show:
+    path: /cliente/{id}
+    controller: App\Controller\ClienteController::show
+    methods: ['GET']
+
+app_cliente_edit:
+    path: /cliente/{id}/edit
+    controller: App\Controller\ClienteController::edit
+    methods: ['GET','POST']
+
+app_cliente_delete:
+    path: /cliente/{id}
+    controller: App\Controller\ClienteController::delete
+    methods: ['POST']
+
+app_pedido_index:
+    path: /pedido
+    controller: App\Controller\PedidoController::index
+    methods: ['GET']
+
+app_pedido_new:
+    path: /pedido/new
+    controller: App\Controller\PedidoController::new
+    methods: ['GET','POST']
+
+app_pedido_show:
+    path: /pedido/{id}
+    controller: App\Controller\PedidoController::show
+    methods: ['GET']
+
+app_pedido_edit:
+    path: /pedido/{id}/edit
+    controller: App\Controller\PedidoController::edit
+    methods: ['GET','POST']
+
+app_pedido_delete:
+    path: /pedido/{id}
+    controller: App\Controller\PedidoController::delete
+    methods: ['POST']
+
