@@ -3,17 +3,18 @@
 {% block title %}Cliente index{% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Listado de Clientes</h1>
+    <h1 class="text-center mb-5">Listado de Clientes</h1>
+    <a class="btn btn-success" href="{{ path('app_cliente_new') }}">Crear cliente</a>
     <div class="table-responsive">
-    <table class="table table-dark table-striped table-sm">
+    <table class="table table-dark table-striped ">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Apellido1</th>
-                <th>Apellido2</th>
-                <th>Direccion</th>
-                <th>actions</th>
+                <th class="text-center">Id</th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Apellido1</th>
+                <th class="text-center">Apellido2</th>
+                <th class="text-center">Direccion</th>
+                <th class="text-center">actions</th>
             </tr>
         </thead>
         <tbody>
@@ -38,5 +39,5 @@
     </table>
     </div>
 
-    <a class="btn btn-success" href="{{ path('app_cliente_new') }}">Create new</a>
+    <a class="btn btn-success" href="{{ path('app_cliente_new') }}">Crear cliente</a>
 {% endblock %}

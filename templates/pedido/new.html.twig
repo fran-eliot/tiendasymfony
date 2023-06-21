@@ -3,9 +3,9 @@
 {% block title %}Nuevo Pedido{% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Crear nuevo pedido</h1>
-
+    <h1 class="text-center mb-3">Crear nuevo pedido</h1>
+    
     {{ include('pedido/_form.html.twig') }}
 
-    <a class="btn btn-success" href="{{ path('app_pedido_index') }}">back to list</a>
+    <a class="btn btn-success d-block mx-auto mt-1" href="{{ path('app_pedido_index') }}">back to list</a>
 {% endblock %}

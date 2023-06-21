@@ -3,9 +3,9 @@
 {% block title %}Producto index{% endblock %}
 
 {% block body %}
-    <h1 class="text-center">Listado Productos</h1>
-
-    <table class="table table-dark table-striped m-3">
+    <h1 class="text-center mb-5">Listado Productos</h1>
+    <a class="btn btn-success " href="{{ path('app_producto_new') }}">Create new</a>
+    <table class="table table-dark table-striped ">
         <thead>
             <tr>
                 <th>Id</th>
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a class="btn btn-success m-3" href="{{ path('app_producto_new') }}">Create new</a>
+    <a class="btn btn-success " href="{{ path('app_producto_new') }}">Create new</a>
 {% endblock %}

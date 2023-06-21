@@ -82,27 +82,5 @@ class Producto
     /**
      * @return Collection<int, Pedido>
      */
-    public function getPedidos(): Collection
-    {
-        return $this->pedidos;
-    }
-
-    public function addPedido(Pedido $pedido): static
-    {
-        if (!$this->pedidos->contains($pedido)) {
-            $this->pedidos->add($pedido);
-            $pedido->addFKProducto($this);
-        }
-
-        return $this;
-    }
-
-    public function removePedido(Pedido $pedido): static
-    {
-        if ($this->pedidos->removeElement($pedido)) {
-            $pedido->removeFKProducto($this);
-        }
-
-        return $this;
-    }
+    
 }

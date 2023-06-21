@@ -3,9 +3,10 @@
 {% block title %}New Cliente{% endblock %}
 
 {% block body %}
-    <h1>Create new Cliente</h1>
+    <h1 class="text-center mb-5 mt-2">Crear cliente</h1>
+    <a class="btn btn-success mt-3 mb-1 d-block mx-auto "href="{{ path('app_cliente_index') }}">back to list</a>
 
     {{ include('cliente/_form.html.twig') }}
 
-    <a href="{{ path('app_cliente_index') }}">back to list</a>
+    
 {% endblock %}
