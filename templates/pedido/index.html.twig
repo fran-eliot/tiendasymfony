@@ -3,15 +3,16 @@
 {% block title %}Pedido index{% endblock %}
 
 {% block body %}
-    <h1>Pedido index</h1>
-
-    <table class="table">
+    <h1 class="text-center m-4">Listado de Pedidos</h1>
+    <a class="btn btn-success " href="{{ path('app_pedido_new') }}">Crear pedido</a>
+    <table class="table table-dark table-striped ">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Fecha</th>
-                <th>Cliente</th>  
-                <th>actions</th>
+                <th class="text-center">Id</th>
+                <th class="text-center">Fecha</th>
+                <th class="text-center">Cliente</th>  
+                <th class="text-center">Productos</th>
+                <th class="text-center">actions</th>
             </tr>
         </thead>
         <tbody>
@@ -19,10 +20,16 @@
             <tr>
                 <td>{{ pedido.id }}</td>
                 <td>{{ pedido.fecha ? pedido.fecha|date('Y-m-d') : '' }}</td>
-                <td>{{ pedido.getFkCliente() }}
-                <td>
-                    <a href="{{ path('app_pedido_show', {'id': pedido.id}) }}">show</a>
-                    <a href="{{ path('app_pedido_edit', {'id': pedido.id}) }}">edit</a>
+                <td>{{ pedido.getFkCliente }}</td>
+                <td>{% if pedido.FKProducto is iterable %}
+                {% for producto in pedido.FKProducto %}
+                        {{ producto.producto}} <br>
+                    {% endfor %}
+                {% endif %}
+                </td>
+               <td>
+                    <a class="btn btn-primary" href="{{ path('app_pedido_show', {'id': pedido.id}) }}">show</a>
+                    <a class="btn btn-warning" href="{{ path('app_pedido_edit', {'id': pedido.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -33,5 +40,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_pedido_new') }}">Create new</a>
+    <a class="btn btn-success" href="{{ path('app_pedido_new') }}">Crear pedido</a>
 {% endblock %}

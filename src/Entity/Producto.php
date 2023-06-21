@@ -2,8 +2,11 @@
 
 namespace App\Entity;
 
+
 use App\Repository\ProductoRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
 
 #[ORM\Entity(repositoryClass: ProductoRepository::class)]
 class Producto
@@ -23,6 +26,13 @@ class Producto
     #[ORM\JoinColumn(name: 'fk_fabricante_id', referencedColumnName: 'id', nullable: false)]
     private ?Fabricante $fk_fabricante = null;
 
+    #[ORM\ManyToMany(targetEntity: Pedido::class, mappedBy: 'producto')]
+    private Collection $pedidos;
+
+    public function __construct()
+    {
+        $this->pedidos = new ArrayCollection();
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -68,4 +78,9 @@ class Producto
     {
         return $this->fk_fabricante." ".$this->producto;
     }
+    //añadidos por mi 
+    /**
+     * @return Collection<int, Pedido>
+     */
+    
 }
