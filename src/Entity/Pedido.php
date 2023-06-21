@@ -23,12 +23,13 @@ class Pedido
     #[ORM\JoinColumn(name: 'fk_cliente_id', referencedColumnName: 'id', nullable: false)]
     private ?Cliente $fk_cliente = null;
 
-    #[ORM\ManyToMany(targetEntity: Producto::class)]
+    #[ORM\ManyToMany(targetEntity: Producto::class,inversedBy:'pedidos')]
     private Collection $fk_producto;
 
     public function __construct()
     {
         $this->fk_producto = new ArrayCollection();
+        $this->fecha =new \DateTime();
     }
 
 
